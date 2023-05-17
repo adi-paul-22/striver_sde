@@ -64,8 +64,8 @@ int main()
         return 0;
     }
 
-// Time Complexity: O((N*M)*(N + M)) + O(N*M), where N = no. of rows in the matrix and M = no. of columns in the matrix.
-// Reason: Firstly, we are traversing the matrix to find the cells with the value 0. It takes O(N*M). Now, whenever we find any such cell we mark that row and column with -1. This process takes O(N+M). So, combining this the whole process, finding and marking, takes O((N*M)*(N + M)).
-// Another O(N*M) is taken to mark all the cells with -1 as 0 finally.
+// Time Complexity: O(2*(N*M)), where N = no. of rows in the matrix and M = no. of columns in the matrix.
+// Reason: We are traversing the entire matrix 2 times and each traversal is taking O(N*M) time complexity.
 
-// Space Complexity: O(1) as we are not using any extra space.
+// Space Complexity: O(N) + O(M), where N = no. of rows in the matrix and M = no. of columns in the matrix.
+// Reason: O(N) is for using the row array and O(M) is for using the col array.
